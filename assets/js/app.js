@@ -87,16 +87,15 @@ $(document).ready(function() {
 
     // scroll to top function 
     $(window).scroll(function() {
-        if ($("window").scrollTop > 20 ) {
-            $("#scroll-to-top").hide();
-        } else {
+        if ($(this).scrollTop() > 200 ) {
             $("#scroll-to-top").show();
+        } else {
+            $("#scroll-to-top").hide();
         }
     })
-    $(document).on("click", "#scroll-to-top", function(e) {
+    $("#scroll-to-top").on("click", function(e) {
         e.preventDefault();
         $("html, body").animate({scrollTop:0}, "200");
-        $("#scroll-to-top").hide();
       });
 
     // Running displayButton();
