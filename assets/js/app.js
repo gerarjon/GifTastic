@@ -3,7 +3,7 @@ $(document).ready(function() {
     var button;
     
     // Array of Topics
-    var topics = ["the office", "dog", "cat", "twice", "jennie", "danmachi", "yugioh", "gordan ramsay", "xqc"];
+    var topics = ["the office", "dog", "cat", "twice", "jennie", "danmachi", "yugioh", "gordan ramsay", "overwatch", "shiba"];
     
     // Function to add buttons of topics to the page
     var displayButton = (arrayToUse, classToAdd, areaToAdd) => {
@@ -84,6 +84,20 @@ $(document).ready(function() {
         console.log(topics);
         displayButton(topics, "gif-button", "#button-container");
     })
+
+    // scroll to top function 
+    $(window).scroll(function() {
+        if ($("window").scrollTop > 20 ) {
+            $("#scroll-to-top").hide();
+        } else {
+            $("#scroll-to-top").show();
+        }
+    })
+    $(document).on("click", "#scroll-to-top", function(e) {
+        e.preventDefault();
+        $("html, body").animate({scrollTop:0}, "200");
+        $("#scroll-to-top").hide();
+      });
 
     // Running displayButton();
     displayButton(topics, "gif-button", "#button-container");
