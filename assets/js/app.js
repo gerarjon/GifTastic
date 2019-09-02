@@ -3,7 +3,7 @@ $(document).ready(function() {
     var button;
     
     // Array of Topics
-    var topics = ["the office", "dog", "cat", "twice", "jennie", "danmachi", "yugioh", "gordan ramsay", "overwatch", "shiba"];
+    var topics = ["the office", "dog", "tzuyu", "twice", "jennie", "danmachi", "yugioh", "gordan ramsay", "overwatch", "shiba"];
     
     // Function to add buttons of topics to the page
     var displayButton = (arrayToUse, classToAdd, areaToAdd) => {

@@ -17,7 +17,7 @@ h1 {
     width: 35px;
 }
 .navbar {
-    padding: 4px 2px;
+    padding: 4px 0;
     overflow: hidden;
     background-color: #000;
 }
@@ -27,7 +27,7 @@ h1 {
     display: block;
     color: #fff;
     text-align: center;
-    padding: 14px 16px;
+    padding: 7px 16px 7px 2px;
     text-decoration: none;
     font-size: 2rem;
     font-weight: 900;
@@ -39,7 +39,8 @@ h1 {
 
 .navbar input[type=text] {
     padding: 6px 8px;
-    margin-top: 12px;
+    padding-right: 20vw;
+    margin-top: 6px;
     font-size: 1.3rem;
     border: none;
 }
@@ -47,8 +48,8 @@ h1 {
 .navbar .search-container button {
     float: right;
     padding: 8px 10px;
-    margin-top: 12px;
-    margin-right: 16px;
+    margin-top: 6px;
+    margin-right: 2px;
     color: #fff;
     font-size: 1.05rem;
     border: none;
@@ -60,7 +61,6 @@ h1 {
     rgb(188, 33, 168, 1) 66%,
     rgb(218, 43, 224, 1) 100%
     );
-    
 }
 
 .navbar .search-container button:hover {
@@ -72,10 +72,15 @@ h1 {
     rgb(164, 24, 168, 1) 100%
   );
 }
+
 .sticky {
     position: fixed;
     top: 0;
     width: 100%;
+}
+.nav-container {
+    margin: 0 auto;
+    max-width: 1060px;
 }
 /* End of Navbar */
 
