@@ -57,7 +57,6 @@ $(document).ready(function() {
                 gifItem.append(t);
                 gifItem.append(r);
                 $("#gif-container").prepend(gifItem);
-                console.log(still);
             }
         })
     })
@@ -81,11 +80,10 @@ $(document).ready(function() {
         e.preventDefault();
         var newTopic = $("input").val().trim();
         topics.push(newTopic);
-        console.log(topics);
         displayButton(topics, "gif-button", "#button-container");
     })
 
-    // scroll to top function 
+    // scroll to top function that hides the scroll button 
     $(window).scroll(function() {
         if ($(this).scrollTop() > 200 ) {
             $("#scroll-to-top").show();
@@ -93,6 +91,8 @@ $(document).ready(function() {
             $("#scroll-to-top").hide();
         }
     })
+
+    // when button is pressed, will scroll to top of document
     $("#scroll-to-top").on("click", function(e) {
         e.preventDefault();
         $("html, body").animate({scrollTop:0}, "200");
