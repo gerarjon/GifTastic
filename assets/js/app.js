@@ -3,7 +3,7 @@ $(document).ready(function() {
     var button;
 
     // Array of Topics
-    var topics = ["the office", "shiba", "tzuyu", "twice", "jennie", "danmachi", "yugioh", "gordan ramsay", "overwatch", "random"];
+    var topics = ["the office", "shiba", "tzuyu", "pokemon", "jennie", "danmachi", "yugioh", "gordan ramsay", "overwatch", "random"];
     
     // Function to add buttons of topics to the page
     var displayButton = (arrayToUse, classToAdd, areaToAdd) => {
@@ -24,8 +24,9 @@ $(document).ready(function() {
         $(".gif-button").removeClass("active");
         $(this).addClass("active");
 
-        //generates a random number between 1 and 100
-        var randomNumber = Math.floor(Math.random() * 100);
+        //generates a random number between 1 and 25
+        var randomNumber = Math.floor(Math.random() * 25) + (Math.floor(Math.random() * 10));
+        // the offset will be a random number between 1-25 + 1-10
         var offset = `&offset=${randomNumber}`;
 
         var type = $(this).attr("data-type");
@@ -83,6 +84,11 @@ $(document).ready(function() {
     $("#add-gif").on("click", function(e) {
         e.preventDefault();
         var newTopic = $("input").val().trim();
+        // returns false if search bar is empty
+        if (newTopic === "") {
+            alert("Please enter something");
+            return false;
+        }
         topics.push(newTopic);
         displayButton(topics, "gif-button", "#button-container");
     })
