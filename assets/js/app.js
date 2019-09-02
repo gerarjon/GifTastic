@@ -1,9 +1,9 @@
 $(document).ready(function() {
     // GLOBAL VARIABLES
     var button;
-    
+
     // Array of Topics
-    var topics = ["the office", "dog", "tzuyu", "twice", "jennie", "danmachi", "yugioh", "gordan ramsay", "overwatch", "shiba"];
+    var topics = ["the office", "shiba", "tzuyu", "twice", "jennie", "danmachi", "yugioh", "gordan ramsay", "overwatch", "random"];
     
     // Function to add buttons of topics to the page
     var displayButton = (arrayToUse, classToAdd, areaToAdd) => {
@@ -24,8 +24,12 @@ $(document).ready(function() {
         $(".gif-button").removeClass("active");
         $(this).addClass("active");
 
+        //generates a random number between 1 and 100
+        var randomNumber = Math.floor(Math.random() * 100);
+        var offset = `&offset=${randomNumber}`;
+
         var type = $(this).attr("data-type");
-        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + type + "&api_key=ah4zNuFUTA4wcUfYLEGQtw5clQ5ArL8s&limit=10";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + type + "&api_key=ah4zNuFUTA4wcUfYLEGQtw5clQ5ArL8s&limit=10" + offset;
 
         $.ajax({
             url: queryURL,
