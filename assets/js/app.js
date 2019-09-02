@@ -86,7 +86,7 @@ $(document).ready(function() {
         var newTopic = $("input").val().trim();
         // returns false if search bar is empty
         if (newTopic === "") {
-            alert("Please enter something");
+            alert("Please enter a gif topic");
             return false;
         }
         topics.push(newTopic);

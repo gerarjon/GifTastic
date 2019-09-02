@@ -10,6 +10,7 @@ h1 {
     padding-left: 8px;
     margin-bottom: 8px;
     font-size: 2.5rem;
+    font-weight: 800;
 }
 
 /* Navbar */
@@ -77,6 +78,7 @@ h1 {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 999;
 }
 .nav-container {
     margin: 0 auto;
@@ -192,7 +194,7 @@ h1 {
         border: 1px solid #ccc;  
     }
     .gif-button {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
     .sticky + .container {
         padding-top: 180px;
