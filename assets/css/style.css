@@ -22,7 +22,6 @@ h1 {
     overflow: hidden;
     background-color: #000;
 }
-
 .navbar a {
     float: left;
     display: block;
@@ -33,11 +32,9 @@ h1 {
     font-size: 2rem;
     font-weight: 900;
 }
-
 .navbar .search-container {
     float: right;
 }
-
 .navbar input[type=text] {
     padding: 9px 8px;
     padding-right: 20vw;
@@ -45,7 +42,6 @@ h1 {
     font-size: 1rem;
     border: none;
 }
-
 .navbar .search-container button {
     float: right;
     padding: 8px 10px;
@@ -63,7 +59,6 @@ h1 {
     rgb(218, 43, 224, 1) 100%
     );
 }
-
 .navbar .search-container button:hover {
   background: linear-gradient(
     to left, 
@@ -73,7 +68,6 @@ h1 {
     rgb(164, 24, 168, 1) 100%
   );
 }
-
 .sticky {
     position: fixed;
     top: 0;
@@ -90,7 +84,7 @@ h1 {
     padding-top: 70px;
 }
 
-/* Contanier */
+/* Container */
 .container {
     margin: 0 auto;
     max-width: 1060px;
@@ -98,19 +92,22 @@ h1 {
 }
 #button-container {
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(100px, 1fr) );
+    grid-template-columns: repeat( auto-fit, minmax(125px, 1fr) );
 }
 .gif-button {
     margin: 0 3px;
-    padding: 2px 0 6px 0;
+    padding: 8px 0;
     font-size: 1rem;
     font-weight: 500;
-    height: 4rem;
+    height: 3rem;
+    text-align: center;
     color: #FFF;
     cursor: pointer;
     border: none;
-    background: /* gradient can be an image */
-    linear-gradient(
+    border-bottom: 5px solid #d228d5c0;
+    background: transparent;
+    /* background:  */
+    /* linear-gradient(
       to left, 
       rgb(94, 24, 168, 1) 0%,
       rgb(104, 24, 168, 1) 33%,
@@ -120,19 +117,18 @@ h1 {
     left 
     bottom  
     no-repeat; 
-    background-size:100% 4px ;/* if linear-gradient, we need to resize it */
-    transition: 0.3s;
+    background-size:100% 4px ; */
+    transition: background-color 0.3s ease-in-out;
 }
 .gif-button:hover {
-    background: /* gradient can be an image */
-    linear-gradient(
+    background: #810da7;
+    /* linear-gradient(
       to left, 
-      rgb(94, 24, 168, .8) 0%,
-      rgb(104, 24, 168, .8) 33%,
-      rgb(134, 24, 168, .8) 66%,
-      rgb(164, 24, 168, .8) 100%
-    );
-    background-size: auto;
+      rgb(94, 24, 168, .8)
+      rgb(104, 24, 168, .8)
+      rgb(134, 24, 168, .8)
+      rgb(164, 24, 168, .8) 
+    ); */
 }
 #gif-container {
     margin-top: 1rem;
@@ -147,6 +143,7 @@ h1 {
     cursor: pointer;
     width: 100%;
 }
+/* End of container */
 
 /* Scroll to top button */
 #scroll-to-top {
@@ -173,7 +170,7 @@ h1 {
 #scroll-to-top:hover {
     opacity: 0.7;
 }
-
+/* End of scroll to top button */
 
 @media screen and (max-width: 600px) {
     .container {
